@@ -1,0 +1,62 @@
+﻿  Build started 1/18/2020 6:35:13 PM.
+       1>Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" on node 1 (Clean target(s)).
+       1>ValidateSolutionConfiguration:
+           Building solution configuration "Debug|x64".
+         ValidateProjects:
+           The project "vsix" is not selected for building in solution configuration "Debug|x64".
+       1>Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" (1) is building "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\dll\ArrayMemberVisualizer.vcxproj" (2) on node 1 (Clean target(s)).
+       2>_PrepareForClean:
+           Deleting file "Debug\x64\ArrayMem.F7062FB7.tlog\ArrayMemberVisualizer.lastbuildstate".
+         CleanVsdbgConfigFile:
+           Deleting file "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.vsdconfig".
+         CleanVsdbgConfigContract:
+           Deleting file "Debug\x64\ArrayMemberVisualizer.Contract.h".
+       2>Done Building Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\dll\ArrayMemberVisualizer.vcxproj" (Clean target(s)).
+       1>Done Building Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" (Clean target(s)).
+  
+  Build succeeded.
+      0 Warning(s)
+      0 Error(s)
+  
+  Time Elapsed 00:00:00.36
+  Build started 1/18/2020 6:35:13 PM.
+       1>Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" on node 1 (Build target(s)).
+       1>ValidateSolutionConfiguration:
+           Building solution configuration "Debug|x64".
+         ValidateProjects:
+           The project "vsix" is not selected for building in solution configuration "Debug|x64".
+       1>Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" (1) is building "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\dll\ArrayMemberVisualizer.vcxproj" (2) on node 1 (default targets).
+       2>InitializeBuildStatus:
+           Creating "Debug\x64\ArrayMem.F7062FB7.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         CreateVsdbgConfigContract:
+           "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\packages\Microsoft.VSSDK.Debugger.VSDConfigTool.16.0.2032702\build\vsdconfigtool.exe" ArrayMemberVisualizer.vsdconfigxml Debug\x64\ArrayMemberVisualizer.Contract.h
+         ClCompile:
+           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\bin\HostX86\x64\CL.exe /c /IC:\Users\maaberne\source\repos\ArrayMemberVisualizer\packages\Microsoft.VSSDK.Debugger.VSDebugEng.16.0.2032702\build\native\inc /IDebug\x64\ /ZI /nologo /W3 /WX- /diagnostics:column /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\x64\ArrayMemberVisualizer.pch" /Fo"Debug\x64\\" /Fd"Debug\x64\vc142.pdb" /Gd /TP /FC /errorReport:queue stdafx.cpp
+           stdafx.cpp
+           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\bin\HostX86\x64\CL.exe /c /IC:\Users\maaberne\source\repos\ArrayMemberVisualizer\packages\Microsoft.VSSDK.Debugger.VSDebugEng.16.0.2032702\build\native\inc /IDebug\x64\ /ZI /nologo /W3 /WX- /diagnostics:column /Od /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\x64\ArrayMemberVisualizer.pch" /Fo"Debug\x64\\" /Fd"Debug\x64\vc142.pdb" /Gd /TP /FC /errorReport:queue dllmain.cpp _EntryPoint.cpp
+           dllmain.cpp
+           _EntryPoint.cpp
+           Generating Code...
+         ResourceCompile:
+           C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /l"0x0409" /IDebug\x64\ /nologo /fo"Debug\x64\ArrayMemberVisualizer.res" ArrayMemberVisualizer.rc 
+         Link:
+           C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.24.28314\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.dll" /INCREMENTAL /NOLOGO "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\packages\Microsoft.VSSDK.Debugger.VSDebugEng.16.0.2032702\build\native\import-lib\x64\vsdebugeng.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Delayimp.lib /DEF:".\ArrayMemberVisualizer.def" /DELAYLOAD:vsdebugeng.dll /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.lib" /MACHINE:X64 /SAFESEH:NO /DLL Debug\x64\ArrayMemberVisualizer.res
+           Debug\x64\dllmain.obj
+           Debug\x64\stdafx.obj
+           Debug\x64\_EntryPoint.obj
+              Creating library C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.lib and object C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.exp
+           ArrayMemberVisualizer.vcxproj -> C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.dll
+         CreateVsdbgConfigFile:
+           "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\packages\Microsoft.VSSDK.Debugger.VSDConfigTool.16.0.2032702\build\vsdconfigtool.exe" ArrayMemberVisualizer.vsdconfigxml "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.dll" "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\x64\ArrayMemberVisualizer.vsdconfig"
+         FinalizeBuildStatus:
+           Deleting file "Debug\x64\ArrayMem.F7062FB7.tlog\unsuccessfulbuild".
+           Touching "Debug\x64\ArrayMem.F7062FB7.tlog\ArrayMemberVisualizer.lastbuildstate".
+       2>Done Building Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\dll\ArrayMemberVisualizer.vcxproj" (default targets).
+       1>Done Building Project "C:\Users\maaberne\source\repos\ArrayMemberVisualizer\ArrayMemberVisualizer.sln" (Build target(s)).
+  
+  Build succeeded.
+      0 Warning(s)
+      0 Error(s)
+  
+  Time Elapsed 00:00:04.93
+  vsix -> C:\Users\maaberne\source\repos\ArrayMemberVisualizer\Debug\ArrayMemberVisualizer.vsix

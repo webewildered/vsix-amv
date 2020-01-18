@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) Microsoft. All rights reserved.
+Licensed under the MIT license. See LICENSE file in the project root for full license information.
+-->
+
+<Configuration xmlns="http://schemas.microsoft.com/vstudio/vsdconfig/2008">
+
+  <!--TODO: If you copy the sample, ensure to regenerate the GUIDs in this file. This
+  can be done with the 'Create GUID' tool ('Tools->Create GUID' in Visual Sudio or 
+  guidgen.exe from the command line). -->
+
+  <NativeComponent
+    ComponentId="{542e4908-3546-4004-92b4-a6e8159176cf}"
+    ComponentLevel="9991500"
+    ModuleName="ArrayMemberVisualizer.dll">
+    <!--NOTE: For more information on ComponentLevel, see https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Component-Levels -->
+
+    <Class Name="CArrayMemberVisualizer" ClassId="{0bde276d-405d-48a6-b254-15c20d9855db}" WorkerProcessSupported="true">
+
+      <Implements>
+        <InterfaceGroup>
+          <Filter>
+            <!--NOTE: This VisualizerId is also used in the .natvis file.-->
+            <VisualizerId RequiredValue="ea82aabb-1be1-41a8-93f1-0f8930f5da01"/>
+          </Filter>
+          <Interface Name="IDkmCustomVisualizer"/>
+        </InterfaceGroup>
+      </Implements>
+    </Class>
+  
+  </NativeComponent>
+</Configuration>

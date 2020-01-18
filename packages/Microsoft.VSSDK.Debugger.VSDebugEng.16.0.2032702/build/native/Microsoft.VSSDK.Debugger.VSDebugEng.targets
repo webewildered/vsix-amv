@@ -1,0 +1,43 @@
+<!--
+***********************************************************************************************
+Microsoft.VSSDK.Debugger.VSDebugEng.targets
+
+This file adds the VSDebugEng headers include path to the include path of the importing project
+and causes the project to link against vsdebugeng.lib.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+***********************************************************************************************
+-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="MicrosoftVSDebugEngSettingsValidate">
+
+  <PropertyGroup>
+    <_MicrosoftVSDebugEngSettingsPaths>$(_MicrosoftVSDebugEngSettingsPaths);$(MSBuildThisFileFullPath)</_MicrosoftVSDebugEngSettingsPaths>
+  </PropertyGroup>
+
+  <Target Name="MicrosoftVSDebugEngSettingsValidate">
+    <Error Condition="'$(_MicrosoftVSDebugEngSettingsPaths)'!=';$(MSBuildThisFileFullPath)'" Text="Microsoft.VSSDK.Debugger.VSDebugEng.settings.targets imported more than once. Paths: '$(_MicrosoftVSDebugEngSettingsPaths)'." />
+    <Error Condition="'$(Language)'!='C++' or '$(CLRSupport)'=='true'" Text="Microsoft.VSSDK.Debugger.VSDebugEng.settings.targets should only be imported into Native C++ projects."/>
+  </Target>
+
+  <!--Support for .vcxproj -->
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)' != '.nativeproj'">
+    <VSDebugEngLibSubDir>$(Platform.ToLowerInvariant())</VSDebugEngLibSubDir>
+    <VSDebugEngLibSubDir Condition="'$(VSDebugEngLibSubDir)'=='win32'">x86</VSDebugEngLibSubDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(MSBuildProjectExtension)' != '.nativeproj'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link Condition="'$(ConfigurationType)'!='StaticLibrary'">
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)import-lib\$(VSDebugEngLibSubDir)\vsdebugeng.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!--Support for .nativeproj (internal Microsoft project type)-->
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)'=='.nativeproj'">
+    <UserIncludes>$(MSBuildThisFileDirectory)inc;$(UserIncludes)</UserIncludes>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(MSBuildProjectExtension)'=='.nativeproj' and '$(TargetType)'!='LIBRARY'">
+    <TargetLib Include="$(MSBuildThisFileDirectory)\import-lib\$(WindowsArchitecture)\vsdebugeng.lib" />
+  </ItemGroup>
+</Project>
