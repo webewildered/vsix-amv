@@ -1,4 +1,4 @@
-# vsix-amv
+# Array member viewer - Visual Studio extension
 VS extension for viewing a member from all entries in an array of structs.
 For example, if you have 
 
@@ -36,4 +36,4 @@ ArrayMemberDesc ArrayMember(const char* base, const char* member, int count)
 }
 ```
 
-To compile it, you need the Visual Studio SDK.  https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019
+To compile it, you need the Visual Studio SDK, https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019.  This project is derived from https://github.com/microsoft/ConcordExtensibilitySamples/tree/master/CppCustomVisualizer
