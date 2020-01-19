@@ -18,10 +18,9 @@ Then you can write `ArrayMember("s",".d",10)` in the watch window and get someth
 		s[4].d	1	int
 ```
 
-To use it,
+### How to use it
 1) Install ./Release/ArrayMemberVisualizer.vsix
 2) Add this code somewhere in the project you're debugging:
-
 ```
 struct ArrayMemberDesc
 {
@@ -36,4 +35,6 @@ ArrayMemberDesc ArrayMember(const char* base, const char* member, int count)
 }
 ```
 
-To compile it, you need the Visual Studio SDK, https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019.  This project is derived from https://github.com/microsoft/ConcordExtensibilitySamples/tree/master/CppCustomVisualizer
+### How to build it
+
+To compile, you need the Visual Studio SDK, https://docs.microsoft.com/en-us/visualstudio/extensibility/visual-studio-sdk?view=vs-2019.  This project is derived from https://github.com/microsoft/ConcordExtensibilitySamples/tree/master/CppCustomVisualizer
